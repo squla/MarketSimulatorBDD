@@ -33,8 +33,6 @@ public class OptionRepository implements IOptionRepository {
 
     @Override
     public String toString() {
-        return "OptionRepository{" +
-                "options=" + options +
-                '}';
+        return "Options :" + options ;
     }
 }

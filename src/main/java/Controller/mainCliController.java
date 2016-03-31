@@ -30,7 +30,7 @@ public class mainCliController {
         this.exit = false;
     }
 
-    public void menuParser(String s) {
+    public void menuParser(String s) throws Exception{
         String[] split = s.split(" ");
         switch (split[0]) {
             case "p":
@@ -91,7 +91,7 @@ public class mainCliController {
         }
     }
 
-    public void addParser(String[] strings) {
+    public void addParser(String[] strings) throws Exception{
         Option option = new Option();
         for (int i = 1; i < strings.length; i++) {
             String[] split = strings[i].split("=");
@@ -114,10 +114,11 @@ public class mainCliController {
                     }
                     break;
                 case "maturity":
-                    option.setMaturity(new SimpleDateFormat());
+                    option.setMaturity(new SimpleDateFormat("dd.MM.yyyy").parse(split[1]));
                     break;
 
             }
         }
+        System.out.println(option.toString());
     }
 }

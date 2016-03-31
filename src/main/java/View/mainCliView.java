@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
  */
 public class mainCliView {
 
-    public static void run() throws IOException{
+    public static void run() throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         mainCliController controller = new mainCliController();
         while(true){

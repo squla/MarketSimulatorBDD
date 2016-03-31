@@ -36,8 +36,6 @@ public class MarketDataRepository implements IMarketDataRepository {
 
     @Override
     public String toString() {
-        return "MarketDataRepository{" +
-                "marketDataList=" + marketDataList +
-                '}';
+        return "Market Data :" + marketDataList ;
     }
 }
