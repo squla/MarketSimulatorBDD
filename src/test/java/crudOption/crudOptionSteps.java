@@ -46,7 +46,7 @@ public class CrudOptionSteps {
         optionRepository.removeOption(new Option("", optionType, null, strike,0));
     }
 
-    @Then("storage contain $count options")
+    @Then("storage contains $count option")
     public void storageContainOptions(int count){
         Assert.assertEquals(optionRepository.getOptions().size(),count);
     }

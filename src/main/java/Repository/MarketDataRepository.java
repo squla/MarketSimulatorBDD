@@ -33,4 +33,11 @@ public class MarketDataRepository implements IMarketDataRepository {
             m.setTimestamp(Date.from(ldt.atZone(ZoneId.systemDefault()).toInstant()));
         }
     }
+
+    @Override
+    public String toString() {
+        return "MarketDataRepository{" +
+                "marketDataList=" + marketDataList +
+                '}';
+    }
 }
